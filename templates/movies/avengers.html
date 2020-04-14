@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Dolittle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/swiper.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+
+	<script src="{{ url_for('static',filename='js/jquery-3.1.1.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/script.js') }}"></script>
+
+
+	<!-- Demo styles -->
+	<style>
+
+.book{
+			background-color: white;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+			<figure class="logo"><a href="index.html"><img src="/static/img/logo.png" alt="Logo"></figure></a>
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<!--<li><a>Genres</a>
+						<ul>
+							<li><a href="genre.html">Action</a></li>
+							<li><a href="genre.html">Comedy</a></li>
+							<li><a href="genre.html">Drama</a></li>
+							<li><a href="genre.html">Romance</a></li>
+						</ul>
+					</li>
+					<li><a>Year</a>
+						<ul>
+							<li><a href="year.html">2017</a></li>
+							<li><a href="year.html">2016</a></li>
+							<li><a href="year.html">2015</a></li>
+							<li><a href="year.html">2014</a></li>
+						</ul>
+					</li>
+					<li><a>Language</a>
+						<ul>
+							<li><a href="language.html">English</a></li>
+							<li><a href="language.html">German</a></li>
+						</ul>
+					</li>-->
+					<li><a href="mostwatched.html">Most Watched</a></li>
+					<li class="mobsearch">
+						<form class="mobform">
+
+
+							<input type="text" name="s" class="mobsearchfield" placeholder="Search...">
+							<input type="submit" value="" class="mobsearchsubmit">
+						</form>
+					</li>
+				</ul>
+			</nav>
+			<form class="search">
+				<input type="text" name="s" class="searchfield" placeholder="Search...">
+				<input type="submit" value="" class="searchsubmit">
+			</form>
+
+			<div class="toggle"><img src="/static/img/menu.svg"></div>
+		</header>
+
+		<main class="content">
+			<div class="single">
+
+				<section class="trailer">
+					<h3>Trailer</h3>
+					<div class="trailer_frame">
+						<iframe width="953" height="536" src="https://www.youtube.com/embed/_Uv1ayN57V0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</section>
+				<!--<section>
+					<div class="book" style="font-size: 40px;color: white;">
+					<a href="{{ url_for('book_now') }}">Book Now!</a>
+					<div>
+				</section>-->
+
+				<section class="movie">
+					<img src="/static/images/slider/avengers.png">
+					<ul>
+						<li>Avengers-The endgame</li>
+						<li> Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe. into a journey of self-discovery.</li>
+						<li><a href="genre.html">Adventure</a>, <a href="genre.html">Drama</a>, <a href="genre.html">Romance</a></li>
+						<li><a href="cast.html">Stephen Gaghan</a>, <a href="cast.html">Robert Downey Jr</a></li>
+						<li>10,000 Views</li>
+					</ul>
+				</section>
+				<section class="links">
+					<h3>Review movie</h3><br>
+					<!--<ul class="dlinks">
+						<li><a>Download</a></li>
+						<li><a href="#">Link1</a></li>
+						<li><a href="#">Link2</a></li>
+						<li><a href="#">Link3</a></li>
+					</ul>-->
+					<form action ="flask" method = "POST">
+					<textarea name = "review" rows="10" cols ="50"></textarea>
+					<br>
+					<input type="submit" name="submit">
+					<!--<ul class="wlinks">
+						<li><a>Watch</a></li>
+						<li><a href="#">Link1</a></li>
+						<li><a href="#">Link2</a></li>
+						<li><a href="#">Link3</a></li>
+					</ul>-->
+					<button id ="book" onclick="location.href='book1.html'";>
+				</section>
+
+				<section class="related">
+					<h3>Related movies</h3>
+					<div class="relatemovie">
+						<a href="#"><img src="/static/images/2.jpg"></a>
+						<a href="#"><span class="relatedname">John Wick</span></a>
+					</div>
+					<div class="relatemovie">
+						<a href="#"><img src="/static/images/3.jpg"></a>
+						<a href="#"><span class="relatedname">Spider Man Homecoming</span></a>
+					</div>
+					<div class="relatemovie">
+						<a href="#"><img src="/static/images/4.jpg"></a>
+						<a href="#"><span class="relatedname">Beauty and Beast</span></a>
+					</div>
+					<div class="relatemovie">
+						<a href="#"><img src="/static/images/5.jpg"></a>
+						<a href="#"><span class="relatedname">Pirates of the Caribbean: Dead Men Tell No Tales</span></a>
+					</div>
+					<div class="relatemovie">
+						<a href="#"><img src="/static/images/6.jpg"></a>
+						<a href="#"><span class="relatedname">Fifty Shades Darker</span></a>
+					</div>
+					<div class="relatemovie">
+						<a href="#"><img src="/static/images/7.jpg"></a>
+						<a href="#"><span class="relatedname">Transformers</span></a>
+					</div>
+
+				</section>
+
+				<section class="comments">
+					<h3>Comments</h3>
+				</section>
+			</div>
+		</main>
+
+		<footer class="footer">
+			
+			<div class="footermenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="terms.html">Terms and conditions</a></li>
+				</ul>
+			</div>
+			<div class="tags">
+				<ul>
+					<li>Watch Free Movies Trailers</li>
+					<li>Movie Trailers</li>
+					<li>English Subtitled Movies Trailers</li>
+					<li>Latest Movies Trailers</li>
+					<li>New Movies Trailers</li>
+
+				</ul>
+			</div>
+
+		</footer>
+
+	</div>
+</body>
+</html>
